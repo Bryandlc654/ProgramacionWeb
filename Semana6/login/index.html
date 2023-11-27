@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="card" id="loginCard">
+        <form action="">
+          <h2>Iniciar Sesión</h2>
+          <input type="text" placeholder="Usuario" />
+          <input type="text" placeholder="Contraseña" />
+          <button class="button-login">Ingresar</button>
+        </form>
+      </div>
+      <div class="card" id="registerCard" style="display: none">
+        <form action="">
+          <h2>Regístrate</h2>
+          <input type="text" placeholder="Nombres" />
+          <input type="text" placeholder="Apellidos" />
+          <input type="text" placeholder="Usuario" />
+          <input type="text" placeholder="Contraseña" />
+          <button class="button-registrar">Registrar</button>
+        </form>
+      </div>
+      <div class="card_btnregister" id="btnRegisterContainer">
+        <h4>¿Aún no tienes una cuenta?</h4>
+        <p>Registrarme para acceder</p>
+        <a href="#" class="btnregister" id="btnregister">Registrarme</a>
+      </div>
+      <div
+        class="card_btnregister"
+        id="btnLoginContainer"
+        style="display: none"
+      >
+        <h4>¿Ya tienes una cuenta?</h4>
+        <p>Inicia sesión para acceder</p>
+        <a href="#" class="btnlogin" id="btnlogin">Iniciar sesión</a>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  
+  </body>
+</html>

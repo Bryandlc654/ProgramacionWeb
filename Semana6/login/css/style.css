@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(180, 0, 2, 1) 16%,
+    rgba(117, 0, 5, 1) 88%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #e0e0e0;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  z-index: 100;
+}
+
+form {
+  display: inline-flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+h2 {
+  color: #b40002;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  background-color: #cfcfcf;
+  border: none;
+  padding: 12px 10px;
+  width: 20rem;
+  color: #4d4d4d;
+}
+
+.button-login,.button-registrar{
+  width: 8rem;
+  background-color: #b40002;
+  color: #e0dde1;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+.card_btnregister {
+  background-color: #d6d6d623;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  flex-direction: column;
+  gap: 12px;
+  color: #e0dde1;
+}
+
+h4{
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.btnregister,.btnlogin{
+  margin: 20px 0 0 0;
+  padding: 6px 12px;
+  color: #e0dde1;
+  text-decoration: none;
+  border: 2px solid #e0dde1;
+  border-radius: 10px;
+  font-size: .9rem;
+}
+
+.btnregister:hover,.btnlogin:hover{
+ background-color: #e0dde1;
+ color: #b40002;
+}
+
+
+.animate-card {
+  animation: slideRight 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+.animate-card-btnregister {
+  animation: slideLeft 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.animate-card-end {
+  animation: slideRight-end 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+.animate-card-btnregister-end {
+  animation: slideLeft-end 0.5s ease-in-out;
+  animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+@keyframes slideRight-end {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft-end {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
