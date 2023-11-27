@@ -45,7 +45,7 @@ if (isset($_POST['operaciones'])) {
     }
     if ($_POST['operaciones'] == 'Guardar') {
         if ($conexion) {
-            $consulta = $conexion->query("INSERT INTO Productos values (IdProducto, NombreProducto,Precio,Presentacion,FVencimiento,Marca, IdCategoria");
+            $consulta = $conexion->query("INSERT INTO Productos (IdProducto, NombreProducto,Precio,Presentacion,FVencimiento,Marca, IdCategoria) VALUES ('$cod','$nombre',$precio,'$presentacion','$fecha','$marca','$categoria')");
             echo "<script>alert('Producto Agregado')</script>";
         }
         $conexion->close();
@@ -53,15 +53,6 @@ if (isset($_POST['operaciones'])) {
     if ($_POST['operaciones'] == 'Actualizar') {
         if ($conexion) {
             $consulta = $conexion->query("UPDATE Productos set NombreProducto='$nombre', Precio='$precio', Presentacion='$presentacion', FVencimiento='$fecha', Marca='$marca', IdCategoria='$categoria' where IdProducto='$cod'");
-            echo '<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <strong class="me-auto">Crud</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                Producto Actualizado
-              </div>
-            </div>';
         }
         $conexion->close();
     }
